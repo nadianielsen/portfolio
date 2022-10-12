@@ -1,0 +1,29 @@
+/* første forsøg på darkmode. Min text blev ikke hvid, når den var darkmode */
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.text__decoration {
+    color: black;
+}
+
+.header {
+    background-color: rgba(191, 27, 203, 0.571);
+    box-shadow: 0 0 10px rgba(81, 0, 81, 0.571);
+}
+
+.main {
+    background-image: url(images/Portfolio-Website-Look---309-2022.jpg);
+}
+
+.footer {
+    background-color: #cc58dd;
+}
+
+@media only screen and (min-width: 798px) {
+    .main {
+        background-image: url(images/Portfolio-Desktop-Version---309-2022.jpg);
+    }
+}

@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;1,300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* dry - DONT REPEAT YOURSELF */
+
+.text__decoration {
+    text-decoration: none;
+}
+
+.width100, .header, .main, .footer {
+    width: 100%;
+}
+
+.nav__list, .flex__and__scrollx__container__gallery, .footer__flex, .phone__flex {
+    display: flex;
+}
+
+.about__heading, .about__text, .hobby__heading, .hobby__text, .extra__text__underhobbytext, .gallery__heading {
+    padding-left: 0.5rem;
+}
+
+.about__heading, .about__text, .hobby__heading, .hobby__text, .extra__text__underhobbytext, .gallery__heading {
+    grid-column: 1/1;
+}
+
+.about__heading, .about__text {
+    grid-row: 1/1;
+}
+
+.hobby__heading, .hobby__text, .extra__text__underhobbytext {
+    grid-row: 2/2;
+}
+
+.about__text, .hobby__text {
+    padding-top: 3rem;
+}
+
+.switch, .mail__text, .linkedin__icon, .nav__list {
+    position: relative;
+}
+
+.slider, .slider:before {
+    position: absolute;
+}
+
+.hobby__heading, .gallery__heading {
+    font-size: 1.5rem;
+}
+
+.my__portfolio, .gallery__heading {
+    font-weight: 700; 
+}
+
+.envelope__icon, .linkedin__icon, .facebook__icon {
+    font-size: 1.6rem;
+} 
+
+.linkedin__icon, .facebook__icon {
+    padding-left: 3.5rem;
+}
+
+.envelope__icon, .linkedin__icon, .facebook__icon {
+    padding-top: 0.5rem;  
+}
+
+.envelope__icon, .phone__icon {
+    padding-left: 1rem;
+}
+
+/* -------switch------- */
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: 0.5rem;
+    right: 1rem;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    cursor: pointer;
+    width: 4rem;
+    height: 2rem;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 7px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: white;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: rgb(0, 0, 0);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 5rem;
+}
+
+.slider.round:before {
+    border-radius: 5rem;
+}
+
+/* -------switch------- */
+
+.header {
+    position: fixed;
+    top: 0;
+    height: 3rem;
+}
+
+
+.nav__list {
+    list-style: none;
+    gap: 1rem;
+    right: 1rem;
+}
+
+.main {
+    height: 140vh;
+    background-size: cover;
+}
+
+.my__portfolio {
+    text-transform: capitalize;
+}
+
+.about__section {
+    display: grid;
+    width: 85%;
+    height: 90vh;
+    grid-template-columns: 4.5fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.photo__of__me {
+    grid-column: 2/2;
+    width: 7.5rem;
+    height: 9rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.282);
+    margin-top: 1.5rem;
+}
+
+.hobby__heading {
+   padding-bottom: 25rem;
+}
+
+.extra__text__underhobbytext {
+    padding-top: 15rem;
+}
+
+.gallery__heading, .extra__text__underhobbytext {
+    margin: 0;
+}
+
+.gallery__heading {
+    padding-top: 3rem;
+}
+
+.flex__and__scrollx__container__gallery {
+    margin-top: 10rem;
+    overflow-x: scroll;
+    gap: 2rem;
+    margin-left: 2.5rem;
+}
+
+.gallery__photos {
+    width: 13rem;
+    height: 13rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.419);
+}
+
+.footer {
+    height: 18vh;
+}
+
+.mail__text {
+    left: 1rem;
+    font-size: 0.8rem;
+}
+
+.linkedin__icon {
+    left: 1rem;
+}
+
+.phone__icon {
+    padding-top: 1rem;
+}
+
+.phonenumber {
+    padding-left: 1rem;
+}
+
+.copyright__flex {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: 0.6rem;
+    opacity: 50%;
+}
+
+@media only screen and (min-width: 798px) {
+    .extra__text__underhobbytext, .flex__and__scrollx__container__gallery, .gallery__heading, .about__section {
+        position: relative;
+    }
+
+    .switch {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+
+    .about__section {
+        width: 60%;
+        margin: 0 auto;
+        height: 70vh;
+        top: 5rem;
+    }
+
+    .photo__of__me {
+        margin-left: 1rem;
+    }
+
+    .extra__text__underhobbytext {
+        bottom: 6.5rem;
+    }
+
+    .gallery__heading {
+        grid-row: 3/3;
+        bottom: 10rem;
+    }
+
+    .flex__and__scrollx__container__gallery {
+        bottom: 4rem;
+        width: 57rem;
+        left: 21.5rem;   
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .flex__and__scrollx__container__gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .footer {
+        height: 18vh;
+    }
+
+    .footer__flex {
+        padding-top: 0.5rem;
+    }
+
+    .footer__flex, .phone__flex {
+        margin-left: 35rem;
+    }
+}

@@ -1,0 +1,109 @@
+@import url(style.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text__decoration {
+    text-decoration: none;
+}
+
+.nav__list, .main__grid {
+    width: 100%;
+}
+
+.nav__list, .gallery__scrollx {
+    display: flex;
+}
+
+.nav__list {
+    gap: 2rem;
+}
+
+.switch {
+    margin-left: 6rem;
+}
+
+.main {
+    height: 131vh;
+}
+
+.main__grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr;
+    row-gap: 1rem;
+}
+
+.drawings__heading, .drawings, .posters, .posters__heading, .wallpapers, .wallpapers__heading, .websites__heading, .links__exam, .links__examtryout {
+    grid-column: 1/1;
+}
+
+.drawings__heading, .drawings {
+    grid-row: 1/1;
+}
+
+.posters, .posters__heading {
+    grid-row: 2/2;
+}
+
+.wallpapers, .wallpapers__heading {
+    grid-row: 3/3;
+}
+
+.drawings__heading, .drawings, .posters, .posters__heading, .wallpapers, .wallpapers__heading {
+    margin-left: 2rem;
+}
+
+.drawings__heading, .posters__heading, .wallpapers__heading {
+    font-size: 1.5rem;
+}
+
+.photos {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.522);
+}
+
+.drawings__heading {
+    margin-top: 4rem;
+}
+
+.gallery__scrollx {
+    height: 16rem;
+    gap: 2rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.gallery__scrollx::-webkit-scrollbar {
+    display: none;
+}
+
+.drawings {
+    margin-top: 7rem;
+}
+
+.posters, .wallpapers {
+    margin-top: 5rem;
+}
+
+.footer {
+    height: 18vh;
+}
+
+@media only screen and (min-width: 798px) {
+    .main {
+        height: 125vh;
+    }
+
+    .switch {
+        margin-left: auto;
+    }
+}
